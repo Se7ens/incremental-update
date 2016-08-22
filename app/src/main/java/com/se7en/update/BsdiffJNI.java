@@ -1,4 +1,4 @@
-package com.douyu.im.bs;
+package com.se7en.update;
 
 
 public class BsdiffJNI {

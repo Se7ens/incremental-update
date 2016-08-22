@@ -1,4 +1,4 @@
-#include "com_douyu_im_bs_BsdiffJNI.h"
+#include "com_se7en_update_BsdiffJNI.h"
 #include "bzlib_private.h"
 #include "bzlib.h"
 #include <stdlib.h>
@@ -188,7 +188,7 @@ int applypatch(int argc, const char* argv[]) {
 	return 0;
 }
 
-jint JNICALL Java_com_douyu_im_bs_BsdiffJNI_applyPatchToOldApk(JNIEnv *pEnv,
+jint JNICALL Java_com_se7en_update_BsdiffJNI_applyPatchToOldApk(JNIEnv *pEnv,
 		jclass clazz, jstring oldPath, jstring newPath, jstring patchPath) {
 	const char* pOldPath = pEnv->GetStringUTFChars(oldPath, JNI_FALSE);
 	const char* pNewPath = pEnv->GetStringUTFChars(newPath, JNI_FALSE);

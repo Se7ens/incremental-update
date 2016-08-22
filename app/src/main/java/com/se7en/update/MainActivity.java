@@ -1,4 +1,4 @@
-package com.douyu.im.bs;
+package com.se7en.update;
 
 import android.content.pm.ApplicationInfo;
 import android.os.Environment;
@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.douyu.im.bs.R;
+
 import java.io.File;
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private static String OLD_APK_PATH = "";
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, OLD_APK_PATH + "\n" + NEW_APK_PATH + "\n" + PATCH_PATH, Toast.LENGTH_LONG).show();
 
                 try {
-                 int ret =  BsdiffJNI.applyPatchToOldApk(OLD_APK_PATH, NEW_APK_PATH, PATCH_PATH);
-                  Toast.makeText(MainActivity.this, "" + ret, Toast.LENGTH_LONG).show();
+                    int ret = BsdiffJNI.applyPatchToOldApk(OLD_APK_PATH, NEW_APK_PATH, PATCH_PATH);
+                    Toast.makeText(MainActivity.this, "" + ret, Toast.LENGTH_LONG).show();
                 } catch (Throwable e) {
                     e.printStackTrace();
                 }
